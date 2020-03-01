@@ -1,5 +1,6 @@
 package com.example.sweater.controller;
 
+import com.example.sweater.domain.Role;
 import com.example.sweater.domain.User;
 import com.example.sweater.repos.UserRepos;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,7 +12,7 @@ import java.util.Collections;
 import java.util.Map;
 
 @Controller
-public class RegistrationControl {
+public class RegistrationController {
     @Autowired
     private UserRepos userRepos;
 
@@ -30,7 +31,8 @@ public class RegistrationControl {
         }
 
         user.setActive(true);
-        user.setRoles(Collections.singleton());
+        user.setRoles(Collections.singleton(Role.USER));
+        userRepos.save(user);
 
         return "redirect:/login";
     }
