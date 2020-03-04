@@ -28,7 +28,7 @@
     <strong>${message.authorName}</strong>
     <div>
        <#if message.filename??>
-           <img src="/img/${message.filename}">
+           <img src="/C:/Users/levdi/IdeaProjects/sweater/src/upload/${message.filename}">
        </#if>
     </div>
 </div>
