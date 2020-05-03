@@ -1,13 +1,13 @@
 <#import "parts/common.ftl" as c>
 
 <@c.page>
-List of users
+Список пользователей
 
 <table>
     <tread>
     <tr>
-        <th>Name</th>
-        <th>Role</th>
+        <th>Имя</th>
+        <th>Статус</th>
         <th></th>
     </tr>
     </tread>
